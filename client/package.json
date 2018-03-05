@@ -1,0 +1,18 @@
+{
+	"name": "ui5labfeature.client",
+	"title": "ui5labfeature",
+	"version": "0.0.1",
+	"description": "UI5Lab Feature",
+	"scripts": {
+		"postinstall": "node ./scripts/bundle.js && npm run lint",
+		"lint": "eslint . --ext=.js,.json"
+	},
+	"devDependencies": {
+		"fs-extra": "4.0.0",
+		"eslint": "4.12.1",
+		"@sap/eslint-plugin-webide-feature": "1.3.12"
+	},
+	"bundledPlugins": {
+		"ui5librarytemplate": "file:src/ui5librarytemplate"
+	}
+}

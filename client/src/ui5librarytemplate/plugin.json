@@ -1,0 +1,50 @@
+{
+    "name": "ui5librarytemplate",
+    "description": "UI5Lab Library template",
+    "i18n": "ui5librarytemplate/i18n/i18n",
+    "requires": {
+        "services": [
+            "template",
+            "templateCustomizationStep"
+        ]
+    },
+    "provides": {
+        "services": {},
+        "interfaces": {}
+    },
+    "configures": {
+        "services": {
+            "template:templates": [
+                {
+                    "id": "UI5LabLibrary.ui5lablibrary",
+                    "template": "ui5librarytemplate/ui5lablibrary/ui5lablibrary",
+                    "name": "{i18n>Config_template_ui5lablibrary_name}",
+                    "description": "{i18n>Config_template_ui5lablibrary_desc}",
+                    "path": "ui5librarytemplate/ui5lablibrary",
+                    "icon": "sap-icon://detail-view",
+                    "internalOnly": false,
+                    "category": "ui5lab",
+                    "wizardSteps": [
+                        "templateCustomizationStep"
+                    ],
+                    "templateType": "project",
+                    "requiresNeoApp": true,
+                    "version": "1.0.0",
+                    "orderPriority": 1000,
+                    "modelRoot": "ui5lab",
+                    "modelFileName": "model.json",
+                    "fileName": "resources.zip",
+                    "previewImage": "image/SAPUI5-Application.png"
+                }
+            ],
+            "template:categories": [
+                {
+                    "id": "ui5lab",
+                    "name": "{i18n>Config_category_UI5Lab_name}",
+                    "description": "{i18n>Config_category_UI5Lab_desc}"
+                }
+            ]
+        }
+    },
+    "subscribes": {}
+}

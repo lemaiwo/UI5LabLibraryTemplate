@@ -1,0 +1,26 @@
+_schema-version: "2.0.0"
+ID: ui5labfeature
+version: 0.0.1
+
+modules:
+  - name: UI5LabLibrary
+    type: html5
+    path: public
+    provides:
+      - name: UI5LabLibrary
+        public: true
+    build-parameters:
+      builder: npm
+      ignore: [".che/", ".npmrc"]
+      timeout: 15m
+      requires:
+        - name: UI5LabLibrary-client
+          artifacts: ["dist/*"]
+          target-path: "client"
+  - name: UI5LabLibrary-client
+    type: html5
+    path: client
+    build-parameters:
+      builder: npm
+      timeout: 15m
+      supported-platforms: []

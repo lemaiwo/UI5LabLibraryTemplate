@@ -1,0 +1,21 @@
+sap.ui.define(['sap/ui/core/Control', './library'],
+    function(Control, library ) {
+        "use strict";
+        var {{ui5lab.parameters.name.value}} = Control.extend("{{ui5lab.parameters.namespace.value}}.{{ui5lab.parameters.name.value}}", {
+            metadata: {
+                library : "{{ui5lab.parameters.namespace.value}}",
+                properties: {
+                    prop1: "string"
+                },
+                events: {}
+            },
+            init: function () {
+            },
+            onAfterRendering: function(evt) {},
+            setProp1: function(value) {
+                this.setProperty("prop1", value, true);
+                return this;
+            }
+        });
+        return {{ui5lab.parameters.name.value}};
+    });

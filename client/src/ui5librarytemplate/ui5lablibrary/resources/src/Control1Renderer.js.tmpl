@@ -1,0 +1,19 @@
+sap.ui.define([],function() {
+    "use strict";
+    var {{ui5lab.parameters.name.value}}Renderer = {};
+
+    {{ui5lab.parameters.name.value}}Renderer.render = function(oRm, oControl) {
+    	oRm.write("<div");
+        oRm.writeControlData(oControl);
+        oRm.addClass("{{ui5lab.parameters.name.value}}-intro");
+        oRm.writeClasses();
+        oRm.write(">");
+        
+        oRm.writeEscaped(oControl.getProp1());
+        
+        oRm.write("</div>");
+    };
+
+    return {{ui5lab.parameters.name.value}}Renderer;
+
+}, /* bExport= */ true);

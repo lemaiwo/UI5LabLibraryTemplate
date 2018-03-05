@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Example - {{ui5lab.parameters.namespace.value}}</title>
+    <base href="{{formatUpp ui5lab.parameters.namespace.value}}">
+    <!--[if lte IE 9]><script type="text/javascript">
+    (function() {
+        var baseTag = document.getElementsByTagName('base')[0];
+        baseTag.href = baseTag.href;
+    })();
+</script><![endif]-->
+    <!-- ********************************************************************** -->
+    <!-- SAPUI5 Bootstrap:                                                     -->
+    <!-- Extend the "libs" property if you like to import additional libraries  -->
+    <!-- ********************************************************************** -->
+	<!-- src sdk TODO : check if works in UI5Lab -> other solution possible ? -->
+    <script id="sap-ui-bootstrap"
+            type="text/javascript"
+            data-sap-ui-libs="{{ui5lab.parameters.namespace.value}}"
+            src="../resources/sap-ui-core.js" 
+            data-sap-ui-theme="sap_belize"
+            data-sap-ui-resourceroots='{"{{ui5lab.parameters.namespace.value}}": "resources/{{formatNamespace ui5lab.parameters.namespace.value}}"}'>
+    </script>
+
+    <script type="text/javascript">
+        sap.ui.getCore().attachInit(function () {
+            var o{{ui5lab.parameters.name.value}} = new {{ui5lab.parameters.namespace.value}}.{{ui5lab.parameters.name.value}}({
+                prop1:"Example control"
+            });
+            o{{ui5lab.parameters.name.value}}.placeAt("content");
+        });
+    </script>
+</head>
+<body class="sapUiBody" role="application">
+<div id="content"></div>
+</body>
+</html>
