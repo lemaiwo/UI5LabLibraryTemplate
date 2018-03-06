@@ -4,8 +4,7 @@
 	"version": "0.0.1",
 	"description": "UI5Lab Feature",
 	"scripts": {
-		"postinstall": "node ./scripts/bundle.js && npm run lint",
-		"lint": "eslint . --ext=.js,.json"
+		"postinstall": "node ./scripts/bundle.js"
 	},
 	"devDependencies": {
 		"fs-extra": "4.0.0",

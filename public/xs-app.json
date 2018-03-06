@@ -1,7 +1,9 @@
 {
+	"authenticationMethod": "none",
 	"routes": [{
 		"source": "^/client/(.*)",
 		"localDir": ".",
+		"authenticationType": "none",
 		"cacheControl": "no-cache,must-revalidate"
 	}]
 }
